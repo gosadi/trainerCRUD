@@ -30,7 +30,7 @@ public class DatabaseConfig {
         datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         datasource.setUrl("jdbc:mysql://localhost:3306/assignment2?serverTimeZone=UTC");
         datasource.setUsername("root");
-        datasource.setPassword("8VB9VNCMGNX6K");
+        datasource.setPassword("root");
         return datasource;
     }
     
