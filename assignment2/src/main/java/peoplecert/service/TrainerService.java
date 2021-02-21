@@ -40,6 +40,21 @@ public class TrainerService {
     public Trainer getTrainerById(int id) {
         return trainerRepo.findById(id);
     }
+    
+    public List<String> listOfSubjects(){
+        List<String> subjects = new ArrayList<>();
+        subjects.add("JAVA");
+        subjects.add("C#");
+        subjects.add("JAVASCRIPT");
+        subjects.add("HTML");
+        subjects.add("PYTHON");
+        subjects.add("CSS");
+        subjects.add("JPA");
+        subjects.add("JQUERY");
+        subjects.add("MYSQL");
+        subjects.add("MARIADB");
+        return subjects;
+    }
 
    
 }

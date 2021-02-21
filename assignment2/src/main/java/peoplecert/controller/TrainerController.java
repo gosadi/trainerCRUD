@@ -45,12 +45,10 @@ public class TrainerController {
         return modelAndView;
     }
     
-    /**
-     * URLs
-     * /trainer/create : GET (trainerList.jsp - link)
-     * /trainer/create : POST (trainerForm.jsp - form)
-     * 
-     */
+    @ModelAttribute("listOfSubjects")
+    public List<String> listOfSubjects(){
+        return service.listOfSubjects();
+    }
     
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String showForm(){

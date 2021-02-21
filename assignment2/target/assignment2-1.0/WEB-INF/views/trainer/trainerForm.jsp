@@ -23,7 +23,7 @@
             <c:set value="Update your trainer" var="UpdateOrCreate"></c:set>
         </c:if>
         <div class="login-page">
-            
+
             <h1>${UpdateOrCreate}</h1>
             <div class="form">
                 <p id="minimatoui">${message}</p>
@@ -31,8 +31,13 @@
                     <input id="tcode" type="number" name="tcode" value="${trainerToEdit.tcode}" hidden/>
                     <input  id="tfirstname" type="text" name="tfirstname" value="${trainerToEdit.tfirstname}" placeholder="Nikos"/>
                     <input  id="tlastname" type="text" name="tlastname" value="${trainerToEdit.tlastname}" placeholder="Matsamplokos"/>
-                    <input  id="tsubject" type="text" name="tsubject" value="${trainerToEdit.tsubject}" placeholder="C#"/>
-                    <input  id="tage" type="number" name="tage" value="${trainerToEdit.tage}" placeholder="Age"/>
+                    <!--<input  id="tsubject" type="text" name="tsubject" value="${trainerToEdit.tsubject}" placeholder="C#"/>-->
+                    <select  name="tsubject">
+                        <c:forEach items="${listOfSubjects}" var="tsubject">
+                            <option  name="tsubject" id="tsubject" value="${tsubject}">${tsubject}</option>
+                        </c:forEach>
+                    </select>
+                    <input  id="tage" type="number" name="tage" value="${trainerToEdit.tage}" placeholder="Age" min="0"/>
                     <input class="button" id="buttonSubmit" type="submit" value="Submit"/>
                 </form>
             </div>
